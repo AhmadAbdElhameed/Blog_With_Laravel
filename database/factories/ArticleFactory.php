@@ -24,12 +24,12 @@ class ArticleFactory extends Factory
 
         return [
             'title' => $title,
-            'slug' => $slug ,
-            'excerpt' => fake()->paragraph(2,true),
-            'description' => fake()->paragraph(8,true),
-            'status' =>true,
+            'slug' => $slug,
+            'excerpt' => fake()->paragraphs(2, true),
+            'description' => fake()->paragraphs(8, true),
+            'status' => true,
             'user_id' => User::inRandomOrder()->value('id'),
-            'category_id' =>Category::inRandomOrder()->value('id')
+            'category_id' => Category::inRandomOrder()->value('id')
         ];
     }
 }

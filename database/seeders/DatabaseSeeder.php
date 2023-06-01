@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(CategorySeeder::class);
-        User::factory()->count(10)->create();
-        Article::factory()
-            ->has(Tag::factory()->count(2))
-            ->count(100)->create();
-
+       $this->call(CategorySeeder::class);
+       User::factory()->count(10)->create();
+       Article::factory()
+           ->has(Tag::factory()->count(2))
+           ->count(50)
+           ->create();
     }
 }
